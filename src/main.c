@@ -65,7 +65,7 @@ void DMA_Config()
 	DMA_InitStruct.DMA_MemoryBurst = DMA_MemoryBurst_Single;
 	DMA_InitStruct.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
 	DMA_InitStruct.DMA_Mode = DMA_Mode_Circular; // hic durmadan veri aktarimina devam etsin
-	DMA_InitStruct.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; / /16 bit sectik cunki 12 bitlik bir adc okumasi yapıyoruz
+	DMA_InitStruct.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; // 16 bit sectik cunki 12 bitlik bir adc okumasi yapıyoruz
 	DMA_InitStruct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;//yukaridakiyle aymı olmak zorunda
 	DMA_InitStruct.DMA_MemoryInc = ENABLE; 	    // hafızaya yazma işleminde adresin surekli degismesini saglıyoruz
 	DMA_InitStruct.DMA_PeripheralInc = DISABLE; // ancek veri okudugumuz adresin surekli sabit kalmasini sagliyoruz.
