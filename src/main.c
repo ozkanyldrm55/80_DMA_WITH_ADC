@@ -1,4 +1,4 @@
-/* ADC1 cevresel biriminden veriyi alip cpu yu kullanmadan dogrudan bellege yaziyoruz */
+/* A portunun Pin_0 bagli potansiyometreden ADC1 cevresel birimiyle  veriyi alip cpu yu kullanmadan dogrudan bellege yaziyoruz */
 #include "stm32f4xx.h"
 #include "stm32f4_discovery.h"
 
@@ -45,7 +45,7 @@ void ADC_Config() {
 	ADC_Cmd(ADC1,ENABLE); // ADC cevresel birim
 
 	ADC_RegularChannelConfig(ADC1,ADC_Channel_0,1,ADC_SampleTime_3Cycles);
-	ADC_DMARequestAfterLastTransferCmd(ADC1,ENABLE); // her ADC DMA transferinden sonra yeni transferler icin istek yapiyoruz.
+	ADC_DMARequestAfterLastTransferCmd(ADC1,ENABLE); // her ADC DMA transferinden sonra yeni transferler icin istek yapiyoruz.Bu mutlaka yapilmali
 	ADC_DMACmd(ADC1 , ENABLE); // ADC yi DMA ile bagladik
 }
 
